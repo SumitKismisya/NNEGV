@@ -1,0 +1,19 @@
+//NNEGV
+
+//This code in written by C programming language.
+//This code is written by Sumit Kumar Kismisya.
+
+#include<stdio.h>
+void main()
+{
+long i,n;
+clrscr();
+printf("\nHow many times do you want to wish birthday:");
+scanf("%ld",&n);
+for(i=1; i<=n; i++);
+{
+//  <name> Enter here the name of the person whose birthday is.
+printf("\nHappy Birthday <name>🎉🎊🎉🎊");
+}
+getch();
+}
