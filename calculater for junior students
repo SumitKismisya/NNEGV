@@ -1,0 +1,139 @@
+//NNEGV/README.md
+//@SumitKismisya
+
+//This code in written by C programming language.
+//This code is written by Sumit Kumar Kismisya.
+
+
+#include<stdio.h>
+#include<math.h>
+#define PI 3.141
+void main()    
+{
+int ch,n,i,power,m,n,t,p,si;
+float area,root,s,a,b,c,radiues,w,l,b,h,r,c,f;
+clrscr();
+printf("\nPress.1.Area of Rectangle");
+printf("\nPress.2.Area of Traingle");
+printf("\nPress.3.Area of Square");
+printf("\nPress.4.Area of Circle");
+printf("\nPress.5.Square Root");
+printf("\nPress.6.Area of Traingle with herion formula");
+printf("\nPress.7.Swap the given number with use 2 varible");
+printf("\nPress.8.Simple interest");
+printf("\nPress.9.If we are given principal and interest and interest rate then how do we calculate the time");
+printf("\nPress.10.If we are given principal and time and simple interest then how do we calculate the interest rate");
+printf("\nPress.11.Fahrenhiet to celsius");
+printf("\nPress.12.Celsiues to fahernhiet");
+printf("\nEnter Your Choice:");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:
+printf("\nEnter the length and width of Rectangle:");
+scanf("%f%f",&w,&h);
+area=(w*h);
+printf("\nArea of Rectangle %f",area);
+break;
+case 2:
+printf("\nEnter the base and hieght of Traingle:");
+scanf("%f%f",&b,&h);
+//You know this about traingle base*hieght and divide by 2.
+area=(b*h)/2;
+printf("\nArea of Traingle %f",area);
+case 3:
+printf("\nEnter the side of Square:");
+scanf("%f%f",&s);
+//this is side of square.
+area=(s*s);
+printf("\nArea of Square %f",area);
+break;
+case 4:
+printf("\nEnter the radiues of Circle:");
+scanf("%f%f",&radiues);
+area=(PI*radiues*radiues);
+printf("\nArea of Circle %0.4f\n",area);
+break;
+case 5:
+printf("\nEnter a number:");
+scanf("%d",&n);
+root=sqrt(n);
+printf("\nSqrt of your entered number %f",root);
+break;
+
+                                     //Area of ∆Traingle with herion formula.
+                                     //Do you know this logic about herion formula (a+b+c)/2 this formula will help to calculate surface of Traingle.
+
+case 6:
+printf("\nEnter the a:");
+scanf("%f",&a);
+printf("\nEnter the b:");
+scanf("%f",&b);
+printf("\nEnter the c:");
+scanf("%f",&c);
+s=(a+b+c)/2;                         //We denote the surface by s.
+printf("\nSurface of Traingle %f",s);
+area=(sqrt(s-a)(s-b)(s-c));
+printf("\nArea of Traingle with herion formula %f",area);
+break;
+case 7:
+printf("\nEnter your first varible like m:");
+scanf("%d",&m);
+printf("\nEnter your second varible like n:");
+scanf("%d",&n);
+m=m+n;
+n=m-n;
+m=m-n;
+//Input n=10; m=20;
+printf("\nAfter Swap m: %d",m);        
+printf("\nAfter Swap n: %d",n);
+//Output m=10; n=20;          
+break;
+case 8:
+printf("\nEnter the principal:");       //we denote the principal by p.
+scanf("%d",&p);
+printf("\nEnter the time:");            //we denote the time by t.
+scanf("%d",&t);
+printf("\nEnter the interest rate:");   //we denote the rate by r.
+scanf("%d",&r);
+si=(p*r*t)/100;                         //We denote the simple interest by si.
+printf("\nSimple interest is %d",si);
+break;
+case 9:
+printf("\nEnter the principal:");
+scanf("%d",&p);
+printf("\nEnter the interest:");
+scanf("%d",&i);
+printf("\nEnter the interest rate:");
+scanf("%d",&r);
+t=(100*i)/(p*r);
+printf("\ntime %f",t);
+break;
+case 10:
+printf("\nEnter the principal:");
+scanf("%d",&p);
+printf("\nEnter the Simple interest:");
+scanf("%d",&si);
+printf("\nEnter the time:");
+scanf("%d",&t);
+r=(si*100)/(p*t);
+printf("\nInterest rate is %f",r);
+break;
+case 11:
+printf("\nEnter the temperature in Fahrenhiet:");
+scanf("%f",&f);
+c=(f-32)*5/9;
+printf("\nSame temperature in celsiues %f",c);
+break;
+case 12:
+printf("\nEnter the temperature in celsius:");
+scanf("%f",&c);
+f=(c*5/9)+32;
+printf("\nSame temperature in fahrenhiet %f",f);
+break;
+default:
+printf("\nThe choice you entered is incorrect");
+break;
+}
+getch();
+}
