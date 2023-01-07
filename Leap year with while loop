@@ -1,0 +1,26 @@
+//NNEGV
+
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+long i,n,a,b;
+clrscr();
+printf("\nEnter the starting year a:");
+scanf("%ld",&a);
+printf("\nEnter the ending year b:");
+scanf("%ld",&b);
+printf("\nLeap year");
+i=a;
+while(i<=b);
+{
+      if(i%4==0&&i%100!=0||i%400==0)
+      {
+      printf("\n %ld",i);
+      }
+      i++;
+}
+getch();
+}
+      
