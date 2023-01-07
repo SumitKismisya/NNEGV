@@ -1,0 +1,26 @@
+//NNEGV
+
+//NNEGV/README.md
+//@SumitKismisya
+
+//This code in written by C programming language.
+//This code is written by Sumit Kumar Kismisya.
+
+
+#include<stdio.h>
+void main()    
+{
+char ch;
+clrscr();
+printf("\nEnter any alphabet:");   //we denote alphabet by ch.
+scanf("%c",&ch);
+if(ch=='a' || ch=='A' || ch=='e' || ch=='E' || ch=='i' || ch=='I' || ch=='o' || ch=='O' || ch=='u' || ch=='U')
+{
+printf("\nEntered alphabet is vowel");
+}
+else
+{
+printf("\nEntered alphabet is consonat");
+}
+getch();
+}
