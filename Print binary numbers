@@ -1,0 +1,25 @@
+//-0,0 +1,129 @@
+//NNEGV/README.md
+//@SumitKismisya
+
+//This code in written by C programming language.
+//This code is written by Sumit Kumar Kismisya.
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+long binary=0,i=1,rem,n;
+clrscr();
+printf("\nEnter a number in decimal:");
+scanf("%ld",&n);
+while(n!=0)
+{
+rem=n%2;
+binary=(rem*i)+binary;
+n=n/2;
+i=i*10;
+}
+printf("\nBinary %ld",binary);
+getch();
+}
