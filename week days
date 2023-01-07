@@ -1,0 +1,55 @@
+//NNEGV/README.md
+//@SumitKismisya
+
+//This code in written by C programming language.
+//This code is written by Sumit Kumar Kismisya.
+
+
+#include<stdio.h>
+void main()
+{
+int ch;
+clrscr();
+printf("\nPress.1.Sunday");
+printf("\nPress.2.Monday");
+printf("\nPress.3.Tuesday");
+printf("\nPress.4.Wednesday");
+printf("\nPress.5.Thursday");
+printf("\nPress.6.Friday");
+printf("\nPress.7.Saturday");
+printf("\nEnter your choice:");
+scanf("%d",&ch);
+if(ch==1)
+{
+printf("\nSunday comes according to the number you entered");
+}
+else if(ch==2)
+{
+printf("\nMonday comes according to the number you entered");
+}
+else if(ch==3)
+{
+printf("\nTuesday comes according to the number you entered");
+}
+else if(ch==4)
+{
+printf("\nWednesday comes according to the number you entered");
+}
+else if(ch==5)
+{
+printf("\nThursday comes according to the number you entered");
+}
+else if(ch==6)
+{
+printf("\nFriday comes according to the number you entered");
+}
+else ifch==7)
+{
+printf("\nSaturday comes according to the number you entered");
+}
+else
+{
+printf("\nEntered choice does not match");
+}
+getch();
+}
