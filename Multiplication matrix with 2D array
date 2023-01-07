@@ -1,0 +1,70 @@
+//NNEGV
+
+//This code in written by C programming language. 
+//This code is written by Sumit Kumar kismisya.
+
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int arr[20][20],arr2[20][20],arr3[20][20],i,j,r,c,k;   //denote row-r column-c //denote in loop row-i column-j.
+    clrscr();
+    printf("\nEnter the order for Matrix:");               // 2D Array Like 2X2 3X3 4X4 5X5 6X6. 
+    scanf("%d%d",&r,&c);
+    printf("\nEnter the Elements of First Array:");        //Enter as many elements as you want.
+    for(i=1; i<=r; i++)                                    //This loop for row.
+    {                                                      //This loop for columns.
+        for(j=1; j<=c; j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("\nEnter the Elements of Second Array:");      //Enter as many elements as you want.
+    for(i=1; i<=r; i++)
+    {
+        for(j=1; j<=c; j++)
+        {
+            scanf("%d",&arr2[i][j]);
+        }
+    }
+    printf("\nFirst Matrix:\n");
+    for(i=1; i<=r; i++)
+    {
+        for(j=1; j<=c; j++)
+        {
+            printf("\t %d",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nSecond Matrix:\n");
+    for(i=1; i<=r; i++)
+    {
+        for(j=1; j<=c; j++)
+        {
+            printf("\t %d",arr2[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=1; i<=r; i++)
+    {
+        for(j=1; j<=c; j++);
+        {
+            arr3[i][j]=0;
+            for(k=1; k<=r; k++)
+            {
+                arr3[i][j]+=arr[i][k]*arr2[i][k];             
+            }
+        }
+    }
+    printf("\nThird Matrix:\n");                    //This is third matrix.
+    for(i=1; i<=r; i++)
+    {
+        for(j=1; j<=c; j++)
+        {
+            printf("\t %d",arr3[i][j]);            //New Matrix after multiplication between 2D Array
+        }
+        printf("\n");
+    }
+    getch();
+}
