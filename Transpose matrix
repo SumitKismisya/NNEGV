@@ -1,0 +1,41 @@
+//NNEGV
+
+//This code in written by C programming language. 
+//This code is written by Sumit Kumar kismisya.
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+int arr[10][10],i,j,r,c;
+clrscr();
+printf("\nEnter the order of matrix:");
+scanf("%d%d",&r,&c);
+printf("\nEnter the elemenets:");
+for(i=1; i<=r; i++)
+{
+     for(j=1; j<=c; j++)
+     {
+     scanf("%d",&arr[i][j]);
+     }
+}
+printf("\nMatrix form:\n");
+for(i=1; i<=r; i++)
+{
+     for(j=1; j<=c; j++)
+     {
+     printf("\t %d",arr[i][j]);
+     }
+printf("\n");
+}
+printf("\nTranspose Matrix:\n");
+for(j=1; j<=c; j++)
+{
+     for(i=1; i<=r; i++)
+     {
+     printf("\t %d",arr[i][j]);
+     }
+printf("\n");
+}
+getch();
+}
