@@ -1,0 +1,46 @@
+//NNEGV
+
+//This code in written by C programming language.
+//This code is written by Sumit Kismisya Kumar.
+
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+long i,n,sum1=0,sum2=0,avg;
+double d1=0,d2=0;
+clrscr();
+printf("\nEnter the given number:");
+scanf("%ld",&n);
+printf("\nOdd series numbers:");
+i=1;
+while(i<=n)
+{
+      if(i%2!=0)
+      {
+      sum1=sum1+i;
+      printf("\n %ld",i);
+      d1++;
+      }
+      i++;
+      }
+      avg=sum1/d1;
+      printf("\nSum of all odd series numbers = %ld",sum1);
+      printf("\nAvg of all odd series numbers = %lf",d1);
+      printf("\nEven series number:");
+      i=1;
+      while(i<=n)
+      {
+            if(i%2==0)
+            {
+            sum2=sum2+i;
+            printf("\n %ld",i);
+            d2++;
+            }
+            i++;
+            }
+            printf("\nSum of all even series numbers = %ld",sum2);
+            printf("\nAvg of all even series numbers = %lf",d2);
+            getch();
+}
