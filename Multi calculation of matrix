@@ -1,0 +1,225 @@
+//NNEGV
+//The author of this code is Sumit Kumar Tursum.
+
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int arr[40][40],arr2[40][40],arr3[40][40],d,ch,i,j,r,c,k,sum=0;
+    double avg;
+    clrscr();
+    printf("\nPress.1.Avg and Sum of all Matrix elements");
+    printf("\nPress.2.Diagonal Matrix");
+    printf("\nPress.3.Subtraction Matrix");
+    printf("\nPress.4.Divide Matrix With single variable");
+    printf("\nPress.5.Multiplication Matrix");
+    printf("\nEnter Your Choice:");
+    scanf("%d",&ch);
+    if(ch==1)
+    {
+        printf("\nEnter the order of Matrix");
+        scanf("%d%d",&r,&c);
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                sum=sum+arr[i][j];
+                avg=sum/(double)(r+c);
+                printf("\t %d",arr[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nAddition Result = %d",sum);
+        printf("\nAvg of all Matrix Elements = %lf",avg);
+    }
+    else if(ch==2)
+    {
+        printf("\nEnter the order of matrix:");
+        scanf("%d%d",&r,&c);
+        printf("\nEnter the Elements");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr[i][j]);
+            }
+            printf("\n");
+        }
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                if(i==j)
+                {
+                    sum+=arr[i][i];
+                }
+            }
+        }
+        printf("\nSum of all Elements = %d",sum);
+    }
+    else if(ch==3)
+    {
+        printf("\nEnter the order of Matrix:");
+        scanf("%d%d",&r,&c);
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
+        }
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr2[i][j]);
+            }
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr2[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nSubtraction Matrix:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++);
+            {
+                arr3[i][j]=arr[i][j]-arr2[i][j];
+                printf("\t %d",arr3[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else if(ch==4)
+    {
+        printf("\nEnter the order of Matrix:");
+        scanf("%d%d",&r,&c);
+        printf("\nEnter the divider:");
+        scanf("%d",&d);
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nNew Matrix after division:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++);
+            {
+                arr2[i][j]=arr[i][j]/d;
+                printf("\t %d",arr2[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else if(ch==5)
+    {
+        printf("\nEnter the order of Matrix:");
+        scanf("%d%d",&r,&c);
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
+        }
+        printf("\nEnter the Elements:");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                scanf("%d",&arr2[i][j]);
+            }
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nEntered Elements in Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr2[i][j]);
+            }
+            print("\n");
+        }
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                arr3[i][j]=0;
+                for(k=1; k<=r; k++)
+                {
+                    arr3[i][j]+=arr[i][k]*arr2[k][j];
+                }
+            }
+        }
+        printf("\nMultiplication Matrix Form:\n");
+        for(i=1; i<=r; i++)
+        {
+            for(j=1; j<=c; j++)
+            {
+                printf("\t %d",arr3[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("\nThe input you have entered is invalid");
+    }
+    getch();
+}
