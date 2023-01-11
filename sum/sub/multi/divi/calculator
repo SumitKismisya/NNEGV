@@ -1,0 +1,65 @@
+//NNEGV
+//The author of this code is Sumit Kumar Tursum.
+
+
+#include<stdio.h>
+#include<conio.h>
+void add(int,int);
+void sub(int,int);
+void mul(int,int);
+void div(float,float);
+void main()
+{
+    int  d1,d2,ch;
+    clrscr();
+    printf("\nEnter any digit number:");
+    scanf("%d%d",&d1,&d2);
+    printf("\nPress.1.Addition.");
+    printf("\nPress.2.Subtraction.");
+    printf("\nPress.3.Multiplication.");
+    printf("\nPress.4.Division.");
+    printf("\nEnter your choice:");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case 1:
+        add(d1,d2);
+        break;
+        case 2:
+        sub(d1,d2);
+        break;
+        case 3:
+        mul(d1,d2);
+        break;
+        case 4:
+        div(d1,d2);
+        break;
+        default:
+        printf("\nEntered choice does not match \ntry again.");
+    }
+    getch();
+}
+void add(int d1,int d2)
+{
+    int a;
+    a=(d1+d2);
+    printf("\nAddition result %d",a);
+}
+void sub(int d1,int d2)
+{
+    int b;
+    b=(d1-d2);
+    printf("\nSubtracion result %d",b);
+}
+void mul(int d1,int d2)
+{
+    int c;
+    c=(d1*d2);
+    printf("\nMultiplication result %d",c);
+}
+void div(float d1,float d2)
+{
+    float d;
+    d=(d1/d2);
+    printf("\nDivision result %f",d);
+}
